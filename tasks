@@ -1,1 +1,3 @@
 a. Investigation on using hadoop with lustre file system. The installation is successful, and so is the wordcount mapreduce job. However, cloudgene still need to acknowledge the availability of HDFS, or otherwise it will deem the hadoop cluster is unavailable. There is a possibility to hack cloudgene code to acknowledge lustre fs, as the replacement of HDFS.
+b. Experiment to compare between minimac4 command line with cpu options and cloudgene-hadoop. Cloudgene-hadoop, performance much better with more mappers.
+
