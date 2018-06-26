@@ -1,0 +1,16 @@
+Problems:
+1. JobTracker cannot start.
+    org.apache.hadoop.security.AccessControlException: Permission denied: user=mapred, access=WRITE, inode="/":hdfs:supergroup:drwxr-xr-x
+   Solution:
+      Because mapred user cannot write to files/dirs in HDFS root directory
+      Switch to hdfs user and assign necessary privilege to mapred user before starting 
+            mapreduce service.
+      sudo -su hdfs
+      hadoop fs -chmod 777 /
+2. TaskTracker cannot start because different version.
+   Change your mapred-site.xml, add the followings:
+           <property>
+                <name>hadoop.skip.worker.version.check</name>
+                <value>true</value>
+            </property>
+    Restart Jobtracker and Tasktracker.
