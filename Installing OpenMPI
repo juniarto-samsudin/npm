@@ -1,0 +1,13 @@
+1. Download the source
+2. Untar it. Let say your source directory is /root/openmpi_src.
+3. mkdir /opt/openmpi. This will be your installation directory
+4. cd /root/openmpi_src
+5. ./configure --prefix="/opt/openmpi"
+6. make
+7. make install
+8. In your .bash_profile, edit
+         PATH=$PATH:$HOME/bin:/opt/openmpi/bin
+         LD_LIBRARY_PATH=/opt/openmpi/lib
+         export LD_LIBRARY_PATH
+         export PATH
+9. source .bash_profile
