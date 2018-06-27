@@ -7,6 +7,13 @@ Problems:
             mapreduce service.
       sudo -su hdfs
       hadoop fs -chmod 777 /
+      
+      But the best way is just to totally ignore hadoop file system permission:
+      In your hdfs-site.xml, on every nodes:
+      <property>
+        <name>dfs.permissions</name>
+        <value>false</value>
+      </property> 
 2. TaskTracker cannot start because different version.
    Change your mapred-site.xml, add the followings:
            <property>
@@ -14,3 +21,4 @@ Problems:
                 <value>true</value>
             </property>
     Restart Jobtracker and Tasktracker.
+    
