@@ -1,0 +1,52 @@
+The database.xml file:
+
+Change this part:
+
+ <default>
+                <dbname>modstore</dbname>
+                <server>local</server>
+                <credentials>
+                        <credential>
+                                <dbname>modstore</dbname>
+                                <username>modstore-server-db</username>
+                                <password>OBF:1ku11l4t1kfx1wfm1lbw1mcf1bpt1dgg1di61bot1me71lfm1wgc1kch1l8h1kqt
+                                </password>
+                        </credential>
+                </credentials>
+        </default>
+
+        <servers>
+                <local>
+                        <!-- <hostname>172.20.98.76</hostname> -->
+                        <hostname>localhost</hostname>
+                        <port>27017</port>
+                        <credentials>
+                                <credential>
+                                        <dbname>modstore</dbname>
+                                        <username>modstore-server-db</username>
+                                        <password>OBF:1ku11l4t1kfx1wfm1lbw1mcf1bpt1dgg1di61bot1me71lfm1wgc1kch1l8h1kqt
+                                        </password>
+                                </credential>
+                        </credentials>
+                </local>
+
+
+Change pom.xml
+
+<properties>
+		<jetty-version>9.2.10.v20150310</jetty-version>
+		<jdk.version>1.8</jdk.version>
+		<junit.version>4.9</junit.version>
+		<jersey.version>2.17</jersey.version>
+		<slf4j.version>1.7.12</slf4j.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<!--<web.ipaddr>172.16.10.135</web.ipaddr>-->
+		<web.ipaddr>localhost</web.ipaddr>
+ 		<web.port>8080</web.port>
+		<web.base.uri.abs>http://${web.ipaddr}:${web.port}</web.base.uri.abs>
+		<!--<web.base.uri.abs>http://172.16.10.135:8080/nse</web.base.uri.abs>-->
+		<web.base.uri>..</web.base.uri>
+		<pbs.ipaddr>aspire.nscc.sg</pbs.ipaddr>
+	</properties>
+  
+  
