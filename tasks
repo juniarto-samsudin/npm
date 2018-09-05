@@ -2,5 +2,6 @@ a. Investigation on using hadoop with lustre file system. The installation is su
 b. Experiment to compare between minimac4 command line with cpu options and cloudgene-hadoop. Cloudgene-hadoop, performance much better with more mappers.
 c. Experiment to compare minimac4 command line with mpi and cloudgene-hadoop. Command line with mpi performs better.
 d. There are 2(two) versions of Minimac4. One from imputation-server, the other one is from minimac4.
+e. Investigation on LASER association server.
 
 
